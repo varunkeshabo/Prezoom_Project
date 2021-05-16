@@ -1,0 +1,930 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><style>#right-panel {
+    background-color: #fff;
+}
+
+#right-panel .cover-top {
+    background: linear-gradient(to bottom, #fff 50%, transparent);
+}
+
+#cover-bottom #cover-bottom-background-right {
+    background: #fff;
+}
+
+@font-face {
+  font-family: octicons-link;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+#container {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #373737;
+  font-family: "Roboto", "Noto Sans", "Ubuntu", "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif, "Noto Sans CJK SC", "Source Han Sans SC", "Microsoft Yahei";
+  font-size: 14px;
+  line-height: 2;
+  word-wrap: break-word;
+  background-color: #fff;
+}
+
+#container a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+#container a:active,
+#container a:hover {
+  outline-width: 0;
+}
+
+#container strong {
+  font-weight: inherit;
+}
+
+#container strong {
+  font-weight: bolder;
+}
+
+#container h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+#container img {
+  border-style: none;
+}
+
+#container svg:not(:root) {
+  overflow: hidden;
+}
+
+#container code,
+#container kbd,
+#container pre {
+  font-family: "Roboto Mono", "Ubuntu Mono", "Menlo", "Consolas", monospace;
+  font-size: 1em;
+}
+
+#container hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+#container input {
+  font: inherit;
+  margin: 0;
+}
+
+#container input {
+  overflow: visible;
+}
+
+#container button:-moz-focusring,
+#container [type="button"]:-moz-focusring,
+#container [type="reset"]:-moz-focusring,
+#container [type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+#container [type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+#container table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+#container td,
+#container th {
+  padding: 0;
+}
+
+#container * {
+  box-sizing: border-box;
+}
+
+#container input {
+  font: 13px/1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+#container a {
+  color: #4078c0;
+  text-decoration: none;
+}
+
+#container a:hover,
+#container a:active {
+  text-decoration: underline;
+}
+
+#container hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+#container hr::before {
+  display: table;
+  content: "";
+}
+
+#container hr::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+#container h1,
+#container h2,
+#container h3,
+#container h4,
+#container h5,
+#container h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+#container h1 {
+  font-size: 30px;
+}
+
+#container h2 {
+  font-size: 21px;
+}
+
+#container h3 {
+  font-size: 16px;
+}
+
+#container h4 {
+  font-size: 14px;
+}
+
+#container h5 {
+  font-size: 12px;
+}
+
+#container h6 {
+  font-size: 11px;
+}
+
+#container p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+#container blockquote {
+  margin: 0;
+}
+
+#container ul,
+#container ol {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#container ol ol,
+#container ul ol {
+  list-style-type: lower-roman;
+}
+
+#container ul ul ol,
+#container ul ol ol,
+#container ol ul ol,
+#container ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+#container dd {
+  margin-left: 0;
+}
+
+#container code {
+  font-family: "Roboto Mono", "Ubuntu Mono", "Menlo", "Consolas", monospace;
+  font-size: 12px;
+}
+
+#container pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font: 12px "Roboto Mono", "Ubuntu Mono", "Menlo", "Consolas", monospace;
+}
+
+#container .pl-0 {
+  padding-left: 0 !important;
+}
+
+#container .pl-1 {
+  padding-left: 3px !important;
+}
+
+#container .pl-2 {
+  padding-left: 6px !important;
+}
+
+#container .pl-3 {
+  padding-left: 12px !important;
+}
+
+#container .pl-4 {
+  padding-left: 24px !important;
+}
+
+#container .pl-5 {
+  padding-left: 36px !important;
+}
+
+#container .pl-6 {
+  padding-left: 48px !important;
+}
+
+#container .form-select::-ms-expand {
+  opacity: 0;
+}
+
+#container:before {
+  display: table;
+  content: "";
+}
+
+#container:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+#container>*:first-child {
+  margin-top: 0 !important;
+}
+
+#container>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+#container a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+#container .anchor {
+  display: inline-block;
+  padding-right: 2px;
+  margin-left: -18px;
+}
+
+#container .anchor:focus {
+  outline: none;
+}
+
+#container h1,
+#container h2,
+#container h3,
+#container h4,
+#container h5,
+#container h6 {
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+#container h1 .octicon-link,
+#container h2 .octicon-link,
+#container h3 .octicon-link,
+#container h4 .octicon-link,
+#container h5 .octicon-link,
+#container h6 .octicon-link {
+  color: #000;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+#container h1:hover .anchor,
+#container h2:hover .anchor,
+#container h3:hover .anchor,
+#container h4:hover .anchor,
+#container h5:hover .anchor,
+#container h6:hover .anchor {
+  text-decoration: none;
+}
+
+#container h1:hover .anchor .octicon-link,
+#container h2:hover .anchor .octicon-link,
+#container h3:hover .anchor .octicon-link,
+#container h4:hover .anchor .octicon-link,
+#container h5:hover .anchor .octicon-link,
+#container h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+#container h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+#container h1 .anchor {
+  line-height: 1;
+}
+
+#container h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+#container h2 .anchor {
+  line-height: 1;
+}
+
+#container h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+#container h3 .anchor {
+  line-height: 1.2;
+}
+
+#container h4 {
+  font-size: 1.25em;
+}
+
+#container h4 .anchor {
+  line-height: 1.2;
+}
+
+#container h5 {
+  font-size: 1em;
+}
+
+#container h5 .anchor {
+  line-height: 1.1;
+}
+
+#container h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+#container h6 .anchor {
+  line-height: 1.1;
+}
+
+#container p,
+#container blockquote,
+#container ul,
+#container ol,
+#container dl,
+#container table,
+#container pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+#container hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+#container ul,
+#container ol {
+  padding-left: 2em;
+}
+
+#container ul ul,
+#container ul ol,
+#container ol ol,
+#container ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#container li>p {
+  margin-top: 16px;
+}
+
+#container dl {
+  padding: 0;
+}
+
+#container dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+#container dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+#container blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+#container blockquote>:first-child {
+  margin-top: 0;
+}
+
+#container blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+#container table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+#container table th {
+  font-weight: bold;
+}
+
+#container table th,
+#container table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+#container table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+#container table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+#container img {
+  max-width: 100%;
+  box-sizing: content-box;
+  background-color: #fff;
+}
+
+#container code {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+#container code:before,
+#container code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+#container pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+#container .highlight {
+  margin-bottom: 16px;
+}
+
+#container .highlight pre,
+#container pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+#container .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+#container pre {
+  word-wrap: normal;
+}
+
+#container pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+#container pre code:before,
+#container pre code:after {
+  content: normal;
+}
+
+#container kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+#container .pl-c {
+  color: #969896;
+}
+
+#container .pl-c1,
+#container .pl-s .pl-v {
+  color: #0086b3;
+}
+
+#container .pl-e,
+#container .pl-en {
+  color: #795da3;
+}
+
+#container .pl-s .pl-s1,
+#container .pl-smi {
+  color: #333;
+}
+
+#container .pl-ent {
+  color: #63a35c;
+}
+
+#container .pl-k {
+  color: #a71d5d;
+}
+
+#container .pl-pds,
+#container .pl-s,
+#container .pl-s .pl-pse .pl-s1,
+#container .pl-sr,
+#container .pl-sr .pl-cce,
+#container .pl-sr .pl-sra,
+#container .pl-sr .pl-sre {
+  color: #183691;
+}
+
+#container .pl-v {
+  color: #ed6a43;
+}
+
+#container .pl-id {
+  color: #b52a1d;
+}
+
+#container .pl-ii {
+  background-color: #b52a1d;
+  color: #f8f8f8;
+}
+
+#container .pl-sr .pl-cce {
+  color: #63a35c;
+  font-weight: bold;
+}
+
+#container .pl-ml {
+  color: #693a17;
+}
+
+#container .pl-mh,
+#container .pl-mh .pl-en,
+#container .pl-ms {
+  color: #1d3e81;
+  font-weight: bold;
+}
+
+#container .pl-mq {
+  color: #008080;
+}
+
+#container .pl-mi {
+  color: #333;
+  font-style: italic;
+}
+
+#container .pl-mb {
+  color: #333;
+  font-weight: bold;
+}
+
+#container .pl-md {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+#container .pl-mi1 {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+#container .pl-mdr {
+  color: #795da3;
+  font-weight: bold;
+}
+
+#container .pl-mo {
+  color: #1d3e81;
+}
+
+#container kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px "Roboto Mono", "Ubuntu Mono", "Menlo", "Consolas", monospace;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+#container .full-commit .btn-outline:not(:disabled):hover {
+  color: #4078c0;
+  border: 1px solid #4078c0;
+}
+
+#container :checked+.radio-label {
+  position: relative;
+  z-index: 1;
+  border-color: #4078c0;
+}
+
+#container .octicon {
+  display: inline-block;
+  vertical-align: text-top;
+  fill: currentColor;
+}
+
+#container .task-list-item {
+  list-style-type: none;
+}
+
+#container .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+#container .task-list-item input {
+  margin: 0 0.2em 0.25em -1.6em;
+  vertical-align: middle;
+}
+
+#container hr {
+  border-bottom-color: #eee;
+}
+</style></head><body id="container" class="export export-html"><span i="1"><h1 id="engi-9874-software-specification-and-design-design-document-group-inida">ENGI 9874 Software Specification and Design Design document group Inida</h1>
+</span><span i="2"><p><strong>group member: Tong Zhao, Zirui Luo, Varun Yadav, Sachin Yadav, Deep Patel</strong></p>
+</span><span i="4"><h2 id="class-diagram">class diagram</h2>
+</span><span i="5"><p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gkrshnj0grj31jd0u0thi.jpg" alt="class diagram"></p>
+</span><span i="7"><h2 id="packages">Packages</h2>
+</span><span i="8"><h3 id="package-diagram">Package Diagram</h3>
+</span><span i="9"><p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gla7j5d4lkj30nw0ewmy6.jpg" alt="package diagram"></p>
+</span><span i="11"><h3 id="thrid-party-packages-summary">Thrid party Packages summary</h3>
+</span><span i="13"><p>Following are the packages that we are using for developing the software. All these packages are part of JavaFX 1 libraries.</p>
+</span><span i="15"><ol>
+<li><span i="15">javafx.animation.FadeTransition</span><span i="16"><ul>
+<li><span i="16">This package is useful for crating fade in and fadeout transition of the shape.</span></li>
+</ul>
+</span></li>
+<li><span i="17">javafx.animation.FillTransition</span><span i="18"><ul>
+<li><span i="18">This package is useful for changing colour of the shape.</span></li>
+</ul>
+</span></li>
+<li><span i="19">javafx.animation.KeyFrame</span><span i="20"><ul>
+<li><span i="20">Defines target values at a specified point in time for a set variable that are interpolated along a timeline.</span></li>
+</ul>
+</span></li>
+<li><span i="21">javafx.animation.KeyValue</span><span i="22"><ul>
+<li><span i="22">Defines a key value to be interpolated for a particular interval along the animation.</span></li>
+</ul>
+</span></li>
+<li><span i="23">javafx.animation.ParallelTransition</span><span i="24"><ul>
+<li><span i="24">For creating parallel transition of multiple animation.</span></li>
+</ul>
+</span></li>
+<li><span i="25">javafx.animation.ScaleTransition</span><span i="26"><ul>
+<li><span i="26">For creating zoom in and zoom out animation for the object.</span></li>
+</ul>
+</span></li>
+<li><span i="27">javafx.animation.SequentialTransition</span><span i="28"><ul>
+<li><span i="28">For crating multiple animation transitions in sequential transition.</span></li>
+</ul>
+</span></li>
+<li><span i="29">javafx.animation.Timeline</span><span i="30"><ul>
+<li><span i="30">For creating a timeline, which will include sequential and parallel transitions perform.</span></li>
+</ul>
+</span></li>
+<li><span i="31">javafx.event.ActionEvent</span><span i="32"><ul>
+<li><span i="32">An event representing some type of action. This event type is widely used to represent a variety of things, such as when a button has been fired, when a keyframe has finished, and other such usages.</span></li>
+</ul>
+</span></li>
+<li><span i="33">javafx.event.EventHandler </span><span i="34"><ul>
+<li><span i="34">This is a functional interface and can therefore be used as the assignment target for a lambda expression or method reference.</span></li>
+</ul>
+</span></li>
+<li><span i="35">javafx.geometry.Insets </span><span i="36"><ul>
+<li><span i="36">A set of inside offsets for the 4 side of a rectangular area.</span></li>
+</ul>
+</span></li>
+<li><span i="37">javafx.geometry.Orientation</span><span i="38"><ul>
+<li><span i="38">Provides the set of 2D classes for defining and performing operations on objects related to two-dimensional geometry.</span></li>
+</ul>
+</span></li>
+<li><span i="39">javafx.stage.Stage </span><span i="40"><ul>
+<li><span i="40">Provides the top-level container classes for JavaFX content.</span></li>
+</ul>
+</span></li>
+<li><span i="41">javafx.util.Duration </span><span i="42"><ul>
+<li><span i="42">A class that defines a duration of time.</span></li>
+</ul>
+</span></li>
+<li><span i="43">javafx.scene.Cursor</span><span i="44"><ul>
+<li><span i="44">For including different aspects of the cursor.</span></li>
+</ul>
+</span></li>
+<li><span i="45">javafx.scene.Group</span><span i="46"><ul>
+<li><span i="46">To group multiple scene, pane, region and scroll pane into one module. A Group node contains an Observable List of children that are rendered in order whenever this node is rendered. A Group will take on the collective bounds of its children and is not directly resizable. Any transform, effect, or state applied to a Group will be applied to all children of that group.</span></li>
+</ul>
+</span></li>
+<li><span i="47">javafx.scene.PerspectiveCamera</span><span i="48"><ul>
+<li><span i="48">To include a perspective camera.</span></li>
+</ul>
+</span></li>
+<li><span i="49">javafx.scene.Scene</span><span i="50"><ul>
+<li><span i="50">The javafx Scene class is the container for all content in a scene graph.</span></li>
+</ul>
+</span></li>
+<li><span i="51">javafx.scene.shape.*</span><span i="52"><ul>
+<li><span i="52">This package includes multiple types of shapes like rectangle, line, circle and ellipse. Ans it also provides definitions of common properties for those objects.</span></li>
+</ul>
+</span></li>
+<li><span i="53">javafx.scene.control.Button </span><span i="54"><ul>
+<li><span i="54">A simple button control. The button control can contain text and/or a graphic.</span></li>
+</ul>
+</span></li>
+<li><span i="55">javafx.scene.control.ContextMenu</span><span i="56"><ul>
+<li><span i="56">For creating context menu for the shape. Which will be activated on right click on the shape.</span></li>
+</ul>
+</span></li>
+<li><span i="57">javafx.scene.control.Menu</span><span i="58"><ul>
+<li><span i="58">For creating the menu for the application.</span></li>
+</ul>
+</span></li>
+<li><span i="59">javafx.scene.control.MenuBar</span><span i="60"><ul>
+<li><span i="60">For crating a menu bar, which will hold all menu.</span></li>
+</ul>
+</span></li>
+<li><span i="61">javafx.scene.control.MenuItem</span><span i="62"><ul>
+<li><span i="62">MenuItem is intended to be used in conjunction with menu to provide options to users. Menuitem serves as the base class for the bulk of JavaFX menus API.</span></li>
+</ul>
+</span></li>
+<li><span i="63">javafx.scene.control.RadioButton</span><span i="64"><ul>
+<li><span i="64">For including radio button and its operation. So the user can choose one items from the list.</span></li>
+</ul>
+</span></li>
+<li><span i="65">javafx.scene.control.ScrollBar </span><span i="66"><ul>
+<li><span i="66">Either a horizontal or vertical bar with increment and decrement buttons and a "thumb" with which the user can interact. Typically not used alone but used for building up more complicated controls such as the ScrollPane and ListView.</span></li>
+</ul>
+</span></li>
+<li><span i="67">javafx.scene.control.ScrollPane</span><span i="68"><ul>
+<li><span i="68">For including scroll pane in the program. Scroll pane will hold the canvas so that user can scroll the canvas as its required.</span></li>
+</ul>
+</span></li>
+<li><span i="69">javafx.scene.control.SeparatorMenuItem</span><span i="70"><ul>
+<li><span i="70">To separate other menu items inside a menu.</span></li>
+</ul>
+</span></li>
+<li><span i="71">javafx.scene.control.TextArea</span><span i="72"><ul>
+<li><span i="72">To creating a text area which will hold the text and try to edit it.</span></li>
+</ul>
+</span></li>
+<li><span i="73">javafx.scene.control.ToggleGroup</span><span i="74"><ul>
+<li><span i="74">Toggle group is useful for crating a group for radio buttons. So that user can choose only one item from this group.</span></li>
+</ul>
+</span></li>
+<li><span i="75">javafx.scene.control.ScrollPane.ScrollBarPolicy</span><span i="76"><ul>
+<li><span i="76">To include different scroll bar policies to include in software.</span></li>
+</ul>
+</span></li>
+<li><span i="77">javafx.scene.layout.GridPane </span><span i="78"><ul>
+<li><span i="78">GridPane lays out its children within a flexible grid of rows and columns. If a border and/or padding is set, then its content will be layed out within those insets.</span></li>
+</ul>
+</span></li>
+<li><span i="79">javafx.scene.layout.Pane </span><span i="80"><ul>
+<li><span i="80">Base class for layout panes which need to expose the children list as public so that users of the subclass can freely add/remove children.</span></li>
+</ul>
+</span></li>
+<li><span i="81">javafx.scene.layout.Region </span><span i="82"><ul>
+<li><span i="82">Region is the base class for all JavaFX Node-based UI Controls, and all layout containers. It is a resizable Parent node which can be styled from CSS. It can have multiple backgrounds and borders. It is designed to support as much of the CSS3 specification for backgrounds and borders as is relevant to JavaFX.</span></li>
+</ul>
+</span></li>
+<li><span i="83">javafx.scene.layout.StackPane </span><span i="84"><ul>
+<li><span i="85">StackPane lays out its children in a back-to-front stack. The z-order of the children is defined by the order of the children list with the 0th child
+being the bottom and last child on top. If a border and/or padding have been set, the children will be laid out within those insets.</span></li>
+</ul>
+</span></li>
+<li><span i="86">javafx.scene.layout.VBox </span><span i="87"><ul>
+<li><span i="87">VBox lays out its children in a single vertical column. If the vbox has a border and/or padding set, then the contents will be laid out within those insets.</span></li>
+</ul>
+</span></li>
+<li><span i="88">javafx.scene.paint.Color </span><span i="89"><ul>
+<li><span i="89">The Color class is used to encapsulate colors in the default sRGB color space.</span></li>
+</ul>
+</span></li>
+</ol>
+</span><span i="92"><h2 id="test-plan">Test plan</h2>
+</span><span i="93"><ol>
+<li><span i="93">The test cases in the classes in model folder.</span><span i="94"><ul>
+<li><span i="94">In the /tstsrc/Prezoom/model/StateTest.java: included <code>addItemInState()</code>, <code>getCurrentNumString()</code>.</span></li>
+<li><span i="95">In the /tstsrc/Prezoom/model/TimeLineTest.java: included <code>addStateInTimeLine()</code>, <code>deleteStateInTimeLine()</code>.</span></li>
+</ul>
+</span></li>
+<li><span i="96">The test cases in the main class launch test.</span><span i="97"><ul>
+<li><span i="97">In the /tstsrc/Prezoom/MainTest.java: included the <code>main()</code> to launch the system</span></li>
+</ul>
+</span></li>
+</ol>
+</span><span i="100"><h2 id="complie-and-execute-code">Complie and Execute code</h2>
+</span><span i="101"><p>To compile and execute the code here are few requirements and steps.</p>
+</span><span i="102"><ol>
+<li><span i="102">Install latest version of Java SE or JDK from the following link: <a href="https://www.oracle.com/java/technologies/javase-downloads.html">https://www.oracle.com/java/technologies/javase-downloads.html</a></span></li>
+<li><span i="103">After installing the latest version of Java Developers Kit, we need to install the latest Eclipse IDE for Java package from the link below: <a href="https://www.eclipse.org/downloads/packages/release/oxygen/r/eclipse-ide-java-ee-developers">https://www.eclipse.org/downloads/packages/release/oxygen/r/eclipse-ide-java-ee-developers</a></span></li>
+<li><span i="104">After installing Eclipse, we need to install JavaFX plugins by following these steps: “Eclipse IDE → Help → Eclipse Marketplace → type fx → install e(fx)clipse 3.6.0 → click accept terms and press the finish button.”</span></li>
+<li><span i="105">Our next step after following the above is to download and configure the latest version of JavaFX SDK from the following link: <a href="https://gluonhq.com/products/javafx/">https://gluonhq.com/products/javafx/</a></span></li>
+<li><span i="106">Once you have downloaded the file, you can extract ‘javafx-sdk-15.0.1’ to a folder on your PC (Make sure you know the exact location of it).</span></li>
+<li><span i="107">After extracting, we have to create user libraries in Eclipse by following these steps: “Eclipse IDE → Window → Preferences→ Search &amp; select user libraries under build path → Click new and name JavaFX→Click on Add external JARs→Go to ‘javafx-sdk-15.0.1’ folder and select all the files in lib folder expect src→Click on Apply and Close.”</span></li>
+<li><span i="109">After following the above step, we need to configure our build path and arguments using the following steps:
+“Go to Run configurations in Eclipse IDE→Click Arguments→In VM arguments type the following ‘—module-path “D:\javafx\javafx-sdk-15.0.1\lib” –add-modules javafx.controls,javafx.fxml’→Click on apply and run.”</span></li>
+<li><span i="110">Now you can create/load your existing project and able to successfully compile it Eclipse IDE.</span></li>
+</ol>
+</span><span i="113"><h2 id="contribution">contribution</h2>
+</span><span i="115"><ol>
+<li><span i="115"><p>Tong Zhao</p>
+</span><span i="116"><ul>
+<li><span i="116">Document: Domain Model diagram, package Diagram and Test Plan.</span></li>
+<li><span i="117">Source Code: Test cases and attributes of graphics set up.</span></li>
+</ul>
+</span></li>
+<li><span i="118"><p>Zirui Luo</p>
+</span><span i="119"><ul>
+<li><span i="119">Document: Lexicon, and class diagrams.</span></li>
+<li><span i="120">Source Code: Setting up the structure of project, graphics operations and state set up.</span></li>
+</ul>
+</span></li>
+<li><span i="121"><p>Varun Yadav Keshaboina</p>
+</span><span i="122"><ul>
+<li><span i="122">Document: Functional, Non-functional requirement and User-Case Stories.</span></li>
+<li><span i="123">Source Code: camera movement and its border layout.</span></li>
+</ul>
+</span></li>
+<li><span i="124"><p>Sachin Kumar Yadav</p>
+</span><span i="125"><ul>
+<li><span i="125">Document: Use-Cases Diagrams and State Diagrams.</span></li>
+<li><span i="126">Source Code: layout set up in view and animation set up.</span></li>
+</ul>
+</span></li>
+<li><span i="127"><p>Deep Maheshbhai Patel</p>
+</span><span i="128"><ul>
+<li><span i="128">Document: How to Run and Compile Code, and third party packages brif introductions.</span></li>
+<li><span i="129">Source Code: trasition,timeline and presentation mode set up.</span></li>
+</ul>
+</span></li>
+</ol>
+</span></body>
+</html>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Prezoom.controller.IntroLayoutController">
+   <children>
+      <ButtonBar layoutX="277.0" layoutY="301.0" prefHeight="53.0" prefWidth="234.0">
+         <buttons>
+            <Button fx:id="createNewPrezoomButton" mnemonicParsing="false" onAction="#createNewPrezoom" text="Create A New" />
+            <Button fx:id="openPrezoomButton" mnemonicParsing="false" onAction="#openPrezoom" text="Open..." />
+         </buttons>
+      </ButtonBar>
+      <Text layoutX="286.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This is a Prezoom" AnchorPane.leftAnchor="286.0" AnchorPane.rightAnchor="229.041015625" AnchorPane.topAnchor="176.294921875">
+         <font>
+            <Font size="39.0" />
+         </font></Text>
+   </children>
+</AnchorPane>
